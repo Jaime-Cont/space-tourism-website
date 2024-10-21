@@ -38,15 +38,17 @@ Users should be able to:
 ### Links
 
 - Solution URL: [My Multi-page Space Tourism Website Repo](https://github.com/Jaime-Cont/space-tourism-website)
-- Live Site URL: [My Multi-page Space Tourism Website hosted by Github Pages](https://your-live-site-url.com)
+- Live Site URL: [My Multi-page Space Tourism Website hosted by Github Pages](https://jaime-cont.github.io/space-tourism-website/)
 
 ## My process
 
 - I started off by plotting down all the basic HTML Elements, setting up the main element, sections and divs that I deemed necessary to accomplish the challened.
-- I proceeded to initialize my CSS Variables for easier color application and setting the main font size and weight, all according to the challenge's specifications.
+- I proceeded to initialize my CSS Variables for easier color application and setting the main font size and weight, all according to the challenge's specifications incorporating mobile first.
+- I also had access to the figma file so I setup the font-styles, text-presets so it was reusable, and then changed them accordingly using media query.
 - I would work on HTML and CSS in an alternating matter to match the output, until I was satisfied with the front end side of things.
 - I then proceeded to work on JavaScript, initializing a var connected to all the elements I want the script to affect
-- I would think of the logic behind getting the correct year, months and days
+- I then worked on fetching the data from the data.json file to be used for when changing the information on the page, so it only has a single page instead of multiple crew pages for example
+- Worked on media query on Tablet after I was happy with Mobile, then later moved to Desktop
 - Trial and Error till I got the output I was looking for.
 
 ### Built with
@@ -61,45 +63,29 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- I'm happy to be improving and noticing that I work better now compared to my older projects, I'm faster at thinking of what I need to include and how to implement them to provide the correct output.
+- I got to practice more on multiple css elements, like using the ::after, :not, :ntn-child, etc.
+- The main thing I did that I'm glad I learned while making this challenge is how to fetch data from JSON files, its really helpful especially when you want to display data on a page that changes, so instead of making multiple html pages I can just have one and basically cycle through the different data.
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+fetch("./data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    /* WHAT TO DO WITH DATA */
+  });
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+If I were to continue development on this website I would put in more pages that could fit in with the tourism website feel, maybe a booking system? a registration for an account? and probably more planets cause I like space!
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Text Hover Effect with Animation](https://codepen.io/anon/pen/emNjGo) - This helped me learn how to make a hover effect with a transition from middle to max width towards the left and right which can be seen in the navbar in tablet and desktop.
+- [Fetch API for fetching data from JSON file](https://www.w3schools.com/jsref/api_fetch.asp) - The API I used to fetch data from data.json which helped enormously!
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [Jaime Contemprato](https://github.com/Jaime-Cont)
+- Frontend Mentor - [@Jaime-Cont](https://www.frontendmentor.io/profile/Jaime-Cont)
+- LinkedIn - [Jaime Contemprato](https://www.linkedin.com/in/jm-contemprato/)
