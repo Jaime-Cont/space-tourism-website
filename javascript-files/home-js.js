@@ -17,9 +17,3 @@ exploreButtonElem.addEventListener('mouseover', () => {
 exploreButtonElem.addEventListener('mouseout', () => {
     buttonAuraElem.style.opacity = "0";
 });
-
-fetch('./data.json')
-    .then(res => res.json)
-    .then(data => {
-        console.log(data);
-    })
