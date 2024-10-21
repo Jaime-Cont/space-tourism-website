@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./css-files/technology-css.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400&display=swap" rel="stylesheet">
+
+  <title>Space Tourism Website by Jaime Contemprato</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="./assets/shared/logo.svg" class="header-img"></a>
+    <hr>
+    </hr>
+
+    <nav id="mobile-nav-bar">
+      <div id="close-nav" onclick="closeMobileNav()"></div>
+      <ul>
+        <li><a href="index.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">00</span> HOME</a></li>
+        <li><a href="destination.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">01</span> DESTINATION</a></li>
+        <li><a href="crew.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">02</span> CREW</a></li>
+        <li><a href="#" class="nav-link barlow-condensed-font text-preset-8 active"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+
+    <nav class="nav-bar">
+      <div id="toggle-nav" onclick="toggleMobileNav()"></div>
+      <ul>
+        <li><a href="index.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">00</span> HOME</a></li>
+        <li><a href="destination.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">01</span> DESTINATION</a></li>
+        <li><a href="crew.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">02</span> CREW</a></li>
+        <li class="active"><a href="#" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p class="barlow-condensed-font text-preset-6 center-text text-1"><span class="half-opacity">03</span> Space launch 101</p>
+    <p class="barlow-condensed-font text-preset-5 text-2"><span class="half-opacity">03</span> Space launch 101</p>
+    <div class="tech-flex">
+      <div id="tech-image"></div>
+      <div class="tech-buttons"> 
+        <button class="tech-btn bellefair-font text-preset-4-btn" id="tech-btn1" onclick="getTech1Data()"><span>1</span></button>
+        <button class="tech-btn bellefair-font text-preset-4-btn" id="tech-btn2" onclick="getTech2Data()"><span>2</span></button>
+        <button class="tech-btn bellefair-font text-preset-4-btn" id="tech-btn3" onclick="getTech3Data()"><span>3</span></button>
+      </div>
+      <div class="tech-flex-2">
+        <div class="tech-terminology">
+          <p class="bellefair-font text-preset-4 center-text half-opacity">The terminology...</p>
+          <p class="bellefair-font text-preset-3 center-text" id="tech-name"></p>
+        </div>
+        <p class="barlow-font text-preset-9 tech-description center-text" id="tech-description"></p>
+      </div>
+    </div>
+  </main>
+  
+  <script src="./javascript-files/technology-js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./css-files/home-css.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400&display=swap" rel="stylesheet">
+
+  <title>Space Tourism Website by Jaime Contemprato</title>
+</head>
+
+<body>
+  <header>
+    <img src="./assets/shared/logo.svg" class="header-img">
+    <hr>
+    </hr>
+
+    <nav id="mobile-nav-bar">
+      <div id="close-nav" onclick="closeMobileNav()"></div>
+      <ul>
+        <li><a href="#" class="nav-link barlow-condensed-font text-preset-8 active"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">00</span> HOME</a></li>
+        <li><a href="destination.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">01</span> DESTINATION</a></li>
+        <li><a href="crew.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">02</span> CREW</a></li>
+        <li><a href="technology.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+
+    <nav class="nav-bar">
+      <div id="toggle-nav" onclick="toggleMobileNav()"></div>
+      <ul>
+        <li class="active"><a href="#" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">00</span> HOME</a></li>
+        <li><a href="destination.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">01</span> DESTINATION</a></li>
+        <li><a href="crew.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">02</span> CREW</a></li>
+        <li><a href="technology.html" class="nav-link barlow-condensed-font text-preset-8"><span
+              class="barlow-condensed-font text-preset-8-bold nav-number">03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-text">
+      <h1 class="sr-only">Space Tourism Website</h1>
+      <p class="barlow-condensed-font text-preset-6 home-text text-1">So, you want to travel to</p>
+      <p class="barlow-condensed-font text-preset-5 home-text text-2">So, you want to travel to</p>
+      <p class="bellefair-font text-preset-1 home-text">Space</p>
+      <p class="barlow-font text-preset-9 home-text">Let’s face it; if you want to go to space, you might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and relax
+        because we’ll give you a truly out of this world experience!
+      </p>
+    </section>
+    <section class="main-button">
+      <h1 class="sr-only">Space Tourism Website</h1>
+      <div id="button-aura"></div>
+      <a href="destination.html">
+        <button id="explore-btn" onselect="showButtonAura()"><span class="bellefair-font text-preset-4">Explore</span></button>
+      </a>
+    </section>
+  </main>
+
+  <script src="./javascript-files/home-js.js"></script>
+</body>
+
+</html>

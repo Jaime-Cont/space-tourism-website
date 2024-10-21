@@ -1,0 +1,679 @@
+/* VARIABLES */
+:root {
+    --blue-900: #0B0D17;
+    --blue-300: #D0D6F9;
+    --white: #FFFFFF;
+    --white-transparent: rgba(255, 255, 255, 0.05);
+    --white-semi-transparent: rgba(255, 255, 255, 0.3);
+}
+
+/* REMOVE PADDING AND MARGIN */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+
+/* SCREEN READER */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* FONTS */
+.bellefair-font {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+}  
+
+.barlow-font {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+}
+
+.barlow-condensed-font {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+  }  
+
+/* TEXT PRESETS */
+.text-preset-1 {
+    font-size: 5rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.text-preset-2 {
+    font-size: 3.5rem;
+    line-height: normal;
+    letter-spacing: 0px;
+}
+
+.text-preset-3 {
+    font-size: 1.5rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.text-preset-4 {
+    font-size: 1.125rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.text-preset-4-btn {
+    font-size: 1.125rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    color: var(--blue-900);
+    text-transform: uppercase;
+}
+
+.text-preset-5 { /* USED STARTING FROM TABLET */
+    font-size: 1.25rem;
+    line-height: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-left: 10%;
+}
+
+.text-preset-6 {
+    font-size: 1rem;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.text-preset-7 { /* USED STARTING FROM DESKTOP */
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.text-preset-8 {
+    font-size: 0.875rem;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.text-preset-8-bold { /* USED STARTING FROM DESKTOP */
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.text-preset-9 {
+    font-size: 0.938rem;
+    line-height: 180%;
+    letter-spacing: 0px;
+    color: var(--blue-300);
+}
+
+body {
+    background: url(../assets/technology/background-technology-mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* HOMEPAGE ELEMENTS */
+header {
+    display: flex;
+    margin: 50px 50px;
+    align-items: center;
+    height: 75px;
+    width: 100vw;
+}
+
+.nav-bar {
+    right: 5%;
+    position: fixed;
+
+    .nav-number {
+        margin-right: 10px;
+    }
+    
+    ul {
+        height: 100px;
+        width: 50vw;
+        display: flex;
+
+        @media only screen and (max-width: 599px) {
+            display: none;
+        }
+    }
+    
+    li {
+        margin-left: 10%;
+        list-style: none;
+    }
+
+    li a {
+        display: block;
+        height: 100px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 3s;
+    }
+
+    @media only screen and (max-width: 599px) {
+        #toggle-nav {
+            width: 50px;
+            height: 50px;
+            background-image: url(../assets/shared/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #toggle-nav:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* MOBILE NAV BAR */
+@media only screen and (max-width: 599px) {
+    #mobile-nav-bar {
+        z-index: 1;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 65%;
+        transform: translateX(100%);
+        height: 100%;
+        background-color: var(--white-transparent);
+        backdrop-filter: blur(25px);
+        transition: 0.5s;
+    }
+
+    .nav-number {
+        margin-right: 10px;
+    }
+
+    ul {
+        margin-top: 150px;
+        display: block;
+    }
+
+    li {
+        margin-left: 10%;
+        list-style: none;
+    }
+
+    li a {
+        display: block;
+        height: 25px;
+        text-decoration: none;
+        display: flex;
+        margin: 25px 0;
+        transition: 0.3s;
+        border-right: 0px solid var(--white-transparent);
+    }
+
+    li a:hover, li a:active {
+        border-right: 4px solid var(--white-semi-transparent);
+    }
+
+    .active {
+        border-right: 4px solid var(--white);
+    }
+
+    #close-nav {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 5%;
+        top: 2%;
+        background-image: url(../assets/shared/icon-close.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #close-nav:hover {
+        cursor: pointer;
+    }
+
+    .text-2 {
+        display: none;
+    }
+}
+
+hr {
+    border: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.half-opacity {
+    opacity: 0.5;
+}
+
+#tech-image {
+    background-image: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+.tech-buttons {
+    margin: 30px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tech-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--white-semi-transparent); 
+    background-color: transparent;
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.tech-btn:not(.tech-btn-active):hover {
+    border: 1px solid var(--white); 
+    cursor: pointer;
+}
+
+.tech-btn-active {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--white); 
+    background-color: var(--white);
+    color: var(--blue-900);
+}
+
+.tech-terminology {
+    margin: 40px 0;
+}
+
+.tech-description {
+    height: 110px;  
+    width: 80vw;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+    /* TABLETS ONWARDS */
+    #mobile-nav-bar {
+        display: none;
+    }
+
+    .text-1 {
+        display: none;
+    }
+
+    /* BODY */
+    body {
+        background: url(../assets/technology/background-technology-tablet.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+    }
+
+    /* TEXT PRESETS */
+    .text-preset-1 {
+        font-size: 9rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-2 {
+        font-size: 5rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-3 {
+        font-size: 2.5rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-4 {
+        font-size: 1.5rem;
+        line-height: normal;
+        letter-spacing: 0px;
+        color: var(--white);
+        text-transform: uppercase;
+    }
+
+    .text-preset-6 {
+        font-size: 1.75rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-8 {
+        font-size: 1rem;
+        line-height: normal;
+        letter-spacing: 2px;
+    }
+
+    .text-preset-9 {
+        font-size: 1rem;
+        line-height: 180%;
+        letter-spacing: 0px;
+    }
+
+    /* DESIGN */
+    header {
+        display: flex;
+        margin: 10px 50px;
+        align-items: center;
+        height: 75px;
+        width: 100vw;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .nav-bar {
+        right: 0;
+        position: fixed;
+        background-color: var(--white-transparent);
+        backdrop-filter: blur(25px);
+
+        .nav-number {
+            margin-right: 10px;
+        }
+
+        ul {
+            height: 100px;
+            width: 75vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-right: 25px;
+        }
+
+        li {
+            width: 15%;
+            list-style: none;
+        }
+
+        li:not(.active):after {
+            /* HOVER EFFECT 1 */
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+        }
+
+        li:not(.active):hover:after {
+            /* HOVER EFFECT 2 */
+            width: 100%;
+            background: var(--white);
+        }
+
+        li a {
+            display: block;
+            height: 100px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 3s;
+        }
+
+        .active {
+            border-bottom: 3px solid var(--white);
+        }
+    }
+
+    #tech-image {
+        background-image: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+        width: 100%;
+        height: 350px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 40px;
+    }
+
+    .tech-buttons {
+        margin: 30px auto;
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 992px) { /* DESKTOPS ONWARDS */
+    /* BODY */
+    body {
+        background: url(../assets/technology/background-technology-desktop.jpg) no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+    }
+
+    /* TEXT PRESETS */
+    .text-preset-2 {
+        font-size: 6rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-3 {
+        font-size: 3.5rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-4 {
+        font-size: 2rem;
+        line-height: normal;
+        letter-spacing: 0px;
+    }
+
+    .text-preset-5 { 
+        font-size: 1.75rem;
+        line-height: normal;
+        letter-spacing: 4px;
+    }
+
+    .text-preset-8 {
+        font-size: 1rem;
+        line-height: normal;
+        letter-spacing: 2px;
+    }
+
+    .text-preset-9 {
+        font-size: 1.125rem;
+        line-height: 180%;
+        letter-spacing: 0px;
+    }
+
+    /* DESIGN */
+    header {
+        display: flex;
+        margin: 50px 50px;
+        align-items: center;
+        height: 75px;
+        width: 100vw;
+    }
+    
+    .nav-bar {
+        right: 0;
+        position: fixed;
+        background-color: var(--white-transparent);
+        backdrop-filter: blur(25px);
+
+        .nav-number {
+            margin-right: 10px;
+        }
+        
+        ul {
+            height: 100px;
+            width: 50vw;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        li {
+            margin-left: 10%;
+            list-style: none;
+        }
+    
+        li:not(.active):after {
+            /* HOVER EFFECT 1 */
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+        }
+
+        li:not(.active):hover:after {
+            /* HOVER EFFECT 2 */
+            width: 100%;
+            background: var(--white);
+        }
+        
+        li a {
+            display: block;
+            height: 100px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 3s;
+        }
+
+        .active {
+            border-bottom: 3px solid var(--white);
+        }
+    }
+    
+    hr {
+        border: none;
+        border-top: 1px solid #FFFFFF;
+        opacity: 25%;
+        width: 42vw;
+        margin-left: 2.5%;
+        z-index: 1;
+        float: left;
+    }
+
+    .tech-flex {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        gap: 25px;
+        justify-content: space-between;
+    }
+
+    .tech-flex :nth-child(1){
+        order: 1;
+    }
+
+    .tech-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: auto 0;
+        margin-left: 10%;
+        height: 400px;
+        width: 5%;
+    }
+
+    .tech-buttons :nth-child(1) {
+        order: 1;
+    }
+
+    .tech-buttons :nth-child(2) {
+        order: 2;
+    }
+
+    .tech-buttons :nth-child(3) {
+        order: 3;
+    }
+
+    .tech-flex-2 {
+        height: 400px;
+        width: 800px;
+        margin: auto 0;
+        min-width: 500px;
+    }
+
+    #tech-image {
+        background-image: url(../assets/technology/image-launch-vehicle-portrait.jpg);
+        width: 600px;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 0;
+    }
+
+    .tech-description {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tech-btn {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        border: 1px solid var(--white-semi-transparent); 
+        background-color: transparent;
+        color: var(--white);
+        transition: 0.5s;
+        margin: 0 auto;
+    }
+    
+    .tech-btn-active {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        border: 1px solid var(--white); 
+        background-color: var(--white);
+        color: var(--blue-900);
+    }
+
+    .center-text {
+        text-align: left;
+    }
+}
