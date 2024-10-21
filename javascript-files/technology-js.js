@@ -15,7 +15,7 @@ function closeMobileNav() {
     mobileNavElem.style.transform = "translateX(100%)";
 }
 
-fetch('../data.json')
+fetch('./data.json')
 .then(res => res.json())
 .then(data => {
     techImageElem.style.backgroundImage = "url("+data.technology[0].images.portrait+")";
@@ -27,7 +27,7 @@ fetch('../data.json')
 })
 
 function getTech1Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         techImageElem.style.backgroundImage = "url("+data.technology[0].images.portrait+")";
@@ -40,7 +40,7 @@ function getTech1Data() {
 }
 
 function getTech2Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         techImageElem.style.backgroundImage = "url("+data.technology[1].images.portrait+")";
@@ -53,7 +53,7 @@ function getTech2Data() {
 }
 
 function getTech3Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         techImageElem.style.backgroundImage = "url("+data.technology[2].images.portrait+")";
