@@ -18,7 +18,7 @@ function closeMobileNav() {
     mobileNavElem.style.transform = "translateX(100%)";
 }
 
-fetch('../data.json')
+fetch('./data.json')
 .then(res => res.json())
 .then(data => {
     destinationPlanetElem.style.backgroundImage = "url("+data.destinations[0].images.webp+")";
@@ -30,7 +30,7 @@ fetch('../data.json')
 })
 
 function getMoonData() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         destinationPlanetElem.style.backgroundImage = "url("+data.destinations[0].images.webp+")";
@@ -46,7 +46,7 @@ function getMoonData() {
 }
 
 function getMarsData() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         destinationPlanetElem.style.backgroundImage = "url("+data.destinations[1].images.webp+")";
@@ -62,7 +62,7 @@ function getMarsData() {
 }
 
 function getEuropaData() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         destinationPlanetElem.style.backgroundImage = "url("+data.destinations[2].images.webp+")";
@@ -78,7 +78,7 @@ function getEuropaData() {
 }
 
 function getTitanData() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         destinationPlanetElem.style.backgroundImage = "url("+data.destinations[3].images.webp+")";
