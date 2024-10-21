@@ -18,7 +18,7 @@ function closeMobileNav() {
     mobileNavElem.style.transform = "translateX(100%)";
 }
 
-fetch('../data.json')
+fetch('./data.json')
 .then(res => res.json())
 .then(data => {
     crewImageElem.style.backgroundImage = "linear-gradient(transparent 90%, var(--blue-900) 100%), url("+data.crew[0].images.webp+")";
@@ -33,7 +33,7 @@ fetch('../data.json')
 })
 
 function getCrew1Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         crewImageElem.style.backgroundImage = "linear-gradient(transparent 90%, var(--blue-900) 100%), url("+data.crew[0].images.webp+")";
@@ -49,7 +49,7 @@ function getCrew1Data() {
 }
 
 function getCrew2Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         crewImageElem.style.backgroundImage = "linear-gradient(transparent 90%, var(--blue-900) 100%), url("+data.crew[1].images.webp+")";
@@ -65,7 +65,7 @@ function getCrew2Data() {
 }
 
 function getCrew3Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         crewImageElem.style.backgroundImage = "linear-gradient(transparent 90%, var(--blue-900) 100%), url("+data.crew[2].images.webp+")";
@@ -81,7 +81,7 @@ function getCrew3Data() {
 }
 
 function getCrew4Data() {
-    fetch('../data.json')
+    fetch('./data.json')
     .then(res => res.json())
     .then(data => {
         crewImageElem.style.backgroundImage = "linear-gradient(transparent 90%, var(--blue-900) 100%), url("+data.crew[3].images.webp+")";
