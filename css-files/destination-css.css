@@ -133,13 +133,15 @@ body {
     background-size: cover;
     height: 100%;
     color: var(--white);
-    overflow: hidden;
+    overflow-x: hidden;
+    min-width: fit-content;
 }
 
-/* DESTINATION ELEMENTS */
+/* HOMEPAGE ELEMENTS */
 header {
     display: flex;
-    margin: 50px 50px;
+    margin: 50px 0;
+    padding-left: 50px;
     align-items: center;
     height: 75px;
     width: 100vw;
@@ -320,6 +322,13 @@ main {
     height: 110px;
 }
 
+.destination-hr {
+    border: none;
+    border-top: 1px solid #FFFFFF;
+    opacity: 25%;
+    margin-top: 50px;
+}
+
 @media only screen and (min-width: 600px) {
     /* TABLETS ONWARDS */
     #mobile-nav-bar {
@@ -383,7 +392,7 @@ main {
     /* DESIGN */
     header {
         display: flex;
-        margin: 10px 50px;
+        margin: 10px 0;
         align-items: center;
         height: 75px;
         width: 100vw;
